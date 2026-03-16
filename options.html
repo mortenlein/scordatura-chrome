@@ -1,0 +1,67 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Scordatura Options</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        font-size: 14px;
+      }
+      body {
+        margin: 24px;
+      }
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      input[type="text"] {
+        width: 100%;
+        max-width: 520px;
+        padding: 8px 10px;
+        border: 1px solid #c7c7c7;
+        border-radius: 6px;
+      }
+      .hint {
+        margin-top: 6px;
+        color: #666;
+      }
+      .row {
+        margin-bottom: 16px;
+      }
+      button {
+        padding: 8px 12px;
+        border: 0;
+        border-radius: 6px;
+        background: #0b6dff;
+        color: #fff;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.6;
+        cursor: default;
+      }
+      .status {
+        margin-top: 10px;
+        color: #0b6dff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scordatura Options</h1>
+
+    <div class="row">
+      <label for="actionPath">Action path</label>
+      <input id="actionPath" type="text" placeholder="scrape" />
+      <div class="hint">Final URL will be: scordatura://&lt;actionPath&gt;?url=...</div>
+    </div>
+
+    <button id="saveBtn">Save</button>
+    <div id="status" class="status" aria-live="polite"></div>
+
+    <script src="options.js"></script>
+  </body>
+</html>
